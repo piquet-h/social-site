@@ -1,0 +1,8 @@
+{
+    "name": "main-credential",
+    "issuer": "https://token.actions.githubusercontent.com",
+    "subject": "repo:piquet-h/social-site:ref:refs/heads/main",
+    "audiences": [
+      "api://AzureADTokenExchange"
+    ]
+  }
