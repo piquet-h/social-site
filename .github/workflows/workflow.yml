@@ -4,7 +4,7 @@ on: [workflow_dispatch]
 
 env:
   AZURE_RESOURCEGROUP_NAME: "rg-social"
-  AZURE_RESOURCEGROUP_LOCATION: "australiaeast"
+  AZURE_RESOURCEGROUP_LOCATION: "westus2"
 
 permissions:  
   id-token: write
