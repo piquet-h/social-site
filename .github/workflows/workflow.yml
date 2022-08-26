@@ -13,6 +13,7 @@ permissions:
 jobs: 
   deploy: 
     runs-on: ubuntu-latest
+    environment: Production
     steps:
     - uses: actions/checkout@v2
       with:
@@ -28,7 +29,7 @@ jobs:
           #!/bin/bash
           az group create --name ${{ env.AZURE_RESOURCEGROUP_NAME }} --location ${{ env.AZURE_RESOURCEGROUP_LOCATION }}
           echo "Azure resource group created"
-    - uses: azure/arm-deployment@v1
+    - uses: azure/arm-deploy@v1
       with:
         deploymentName: ${{ github.run_number }}
         resourceGroupName: ${{ env.AZURE_RESOURCEGROUP_NAME }}
